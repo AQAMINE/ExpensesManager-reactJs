@@ -22,9 +22,11 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+  
+  //add expens
   return (
     <div>
-      <NewExpense/>
+      <NewExpense  />
       <Expenses items={expenses} />
     </div>
   );
