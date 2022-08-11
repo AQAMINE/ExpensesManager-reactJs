@@ -57,15 +57,15 @@ const ExpenseForm = () => {
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label>Title</label>
-                    <input type='text' onChange={titleChangeHandler} />
+                    <input type='text' value={ userInput.entredTitle } onChange={titleChangeHandler} />
                 </div>
                 <div className='new-expense__control'>
                     <label>Amount</label>
-                    <input type='number' min='0.01' step='0.01' onChange={ amountChangeHandler } />
+                    <input type='number' min='0.01' value={ userInput.entredAmount } step='0.01' onChange={ amountChangeHandler } />
                 </div>
                 <div className='new-expense__control'>
                     <label>Date</label>
-                    <input type='date' min='2022-01-01' max='2023-12-31' onChange={ dateChangeHandler }/>
+                    <input type='date' min='2022-01-01' value={ userInput.entredDate } max='2023-12-31' onChange={ dateChangeHandler }/>
                 </div>
                 <div className='new-expense__actions'>
                     <button type='submit'>Add Expense</button>
