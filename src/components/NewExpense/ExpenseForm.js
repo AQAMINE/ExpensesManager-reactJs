@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ExpenseDate from '../Expenses/ExpenseDate';
+// import ExpenseDate from '../Expenses/ExpenseDate';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
@@ -50,6 +50,10 @@ const ExpenseForm = () => {
             date: new Date(userInput.entredDate)
         }
         console.log(expenseData);
+        //Clear Form After Submition 
+        setUserInput(prevState => {
+            return {entredTitle:'', entredAmount: '', entredDate: ''};
+        });
     };
 
     return (
