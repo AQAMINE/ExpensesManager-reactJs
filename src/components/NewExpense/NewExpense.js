@@ -1,14 +1,15 @@
 import './NewExpense.css';
 import ExpenseForm from './ExpenseForm';
 
-const NewExpense = () => {
+const NewExpense = props => {
     const saveExpenseDataHandler = enteredExpenseData => {
         const expenseData = {
             ...enteredExpenseData,
             //generate random id is not the prefect random can generate the some id
             id: Math.random().toString()
         };
-        console.log(expenseData);
+        //Call function in and send object to Parent Component 
+        props.onAddExpense(expenseData);
     };
 
     return (
